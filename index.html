@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>CNIT 133: fall16</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+ 
+<body>
+    
+    
+</body>
+ <header>
+  
+  <div class="hamburger-icon" id="icon">
+    <div class="icon-1" id="a"></div>
+    <div class="icon-2" id="b"></div>
+    <div class="icon-3" id="c"></div>
+    <div class="clear"></div>
+  </div>
+  
+    <nav id="nav">
+        <div class="navbar"> 
+            <ul>
+                <li><a href="hw1.html">homework 1</a></li>
+                <li><a href="hw2.html">homework 2</a></li>
+                <li><a href="#">homework 3</a></li>
+                <li><a href="#">homework 4</a></li>
+                <li><a href="#">homework 5</a></li>
+                <li><a href="#">homework 6</a></li>
+                <li><a href="#">homework 7</a></li>
+                <li><a href="#">homework 8</a></li>
+            </ul>
+        </div>
+  
+  </nav>
+  
+  <div class="dark-blue" id="blue"></div>
+  
+  <section class="content-home">
+    <h1>CNIT 133: JavaScript</h1>
+    <h2>fall 2016</h2>
+    <p class="small">created by Phraew P. (Patty)</p>
+  </section>
+</header>
+
+
+<p id="lastupdate"></p>
+    <script>
+    function myFunction() {
+        var x = new Date(document.lastModified);
+        document.getElementById("lastupdate").innerHTML = x;
+    }
+    </script>
+
+<script src="custom.js" type="text/javascript"></script>
+</html>
