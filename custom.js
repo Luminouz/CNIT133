@@ -12,3 +12,21 @@ icon.addEventListener('click', function() {
   nav.classList.toggle('show');
   blue.classList.toggle('slide');
 });
+
+function showAnswer(id) {
+  $(id).addClass('global-modal-show');
+}
+
+function hideAnswer() {
+  $('.global-modal').removeClass('global-modal-show');
+}
+
+
+$( ".icon" ).on( "click", function (e) {
+    e.preventDefault();
+    showAnswer(this.dataset.answer);
+});
+
+$( ".overlay" ).on( "click", hideAnswer);
+$( ".global-modal_close" ).on( "click", hideAnswer);
+$(".mobile-close").on("click", hideAnswer);

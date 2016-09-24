@@ -1,56 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href='style.css' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CNIT133: Homework 2</title>
+<!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--JQuery-->
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>    
+<!--fontawesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--cssstlyesheet-->
+    <link href='owl.carousel.css'rel='stylesheet' type='text/css'> 
+    <link href='magnific-popup.css' rel='stylesheet' type='text/css'>
+    <link href='animate.css' rel='stylesheet' type='text/css'>    
+    <link href='stylehw2.css' rel='stylesheet' type='text/css'>
+	
 </head>
  
 
- <header>
+<header>
+   <div class="hamburger-icon" id="icon">
+       <div class="icon-1" id="a"></div>
+       <div class="icon-2" id="b"></div>
+       <div class="icon-3" id="c"></div>
+       <div class="clear"></div>
+    </div>
   
-  <div class="hamburger-icon" id="icon">
-    <div class="icon-1" id="a"></div>
-    <div class="icon-2" id="b"></div>
-    <div class="icon-3" id="c"></div>
-    <div class="clear"></div>
-  </div>
+<nav id="nav">
+           <div class="navbar"> 
+               <ul>
+                   <li><a href="hw1.html">homework 1</a></li>
+                   <li><a href="hw2.html">homework 2</a></li>
+                   <li><a href="#">homework 3</a></li>
+                   <li><a href="#">homework 4</a></li>
+                   <li><a href="#">homework 5</a></li>
+                   <li><a href="#">homework 6</a></li>
+                   <li><a href="#">homework 7</a></li>
+                   <li><a href="#">homework 8</a></li>
+                </ul>
+            </div>
   
-    <nav id="nav">
-        <div class="navbar"> 
-            <ul>
-                <li><a href="hw1.html">homework 1</a></li>
-                <li><a href="hw2.html">homework 2</a></li>
-                <li><a href="#">homework 3</a></li>
-                <li><a href="#">homework 4</a></li>
-                <li><a href="#">homework 5</a></li>
-                <li><a href="#">homework 6</a></li>
-                <li><a href="#">homework 7</a></li>
-                <li><a href="#">homework 8</a></li>
-            </ul>
-        </div>
-  
-  </nav>
+</nav>
 </header>
+ 
+ <div class="dark-blue" id="blue"></div>
   
-  <div class="dark-blue" id="blue"></div>
-  
-<body> 
-   
-    <section class="content-home">
-        <h3>CNIT 133: JavaScript</h3>
-        <p>fall 2016</p>
-        <h1>Homework 2:<br>Basic Operations</h1>
-        <p class="small">created by Phraew P. (Patty)</p>
-        <div id="lastupdate">
-            <script>
-                var dateModified = document.lastModified;
-                mydate = dateModified.slice(0,16);
-                document.write("Last updated: " + mydate);
-            </script>
-        </div>  
-    </section>
-</body>    
+<body>
+       <section id="content-home">
+           	<div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <div class="section-heading heading-padding">
+                            <h1>CNIT 133: JavaScript</h1>
+                            <p>fall 2016</p>
+                            <h1>Homework 2:<br>Basic Operations</h1>
+                        </div>
+                    </div>
+               </div>
+           </div>
+                        
+           <div class="section-padding">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer1"><i class="fa fa-2x"> 1</i></a>
+                                    <h3 class="text-uppercase">document.write</h3>
+                                    <p>Write the script using document.write statements.</p>
+                            </div>
+			            </div>
+                       
+                        <div class="col-sm-6 text-center">
+                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer2"><i class="fa fa-2x"> 2</i></a>
+                                    <h3 class="text-uppercase">Input integers on form</h3>
+                                    <p>Input integers via form text boxes and display sum, average, product, min and max.</p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer3"><i class="fa fa-2x"> 3</i></a>
+                                    <h3 class="text-uppercase">Input numbers and fade results.</h3>
+                                    <p>Input numbers on a form. Fade the results.</p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> 4</i></a>
+                                    <h3 class="text-uppercase">Squares and Cubes</h3>
+                                    <p>Calculate squares and cubes for 1 - 6. Use innerHTML to write a table for 7 - 10.</p>
+                            </div>
+			            </div>
+			        </div>
+                </div>
+           </div>
+<!-- answer1 -->                    
+                        <div id="answer1" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+			                            <p>Create a webpage that contains a script that displays in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space. Write the script using document.write statements. Use a font family of Times New Roman and the color red for the letters ab, a font family of Arial and the color blue for the the numbers 12 and a font family of Impact, the color green, and emphasized (in italics) for the numbers 34. </p>
+                                    </div>
+                                       <div class="global-modal-body">
+                                        <script>
 
+                                            document.write("<strong><span style='font-family:times; color:red;'> ab</span><strong>");
+                                            document.write("<strong><span style='font-family:arial; color:blue;'> 12</span><strong>");
+                                            document.write("<strong><i><span style='font-family:impact; color:green;'> 34</span></i><strong>");
+
+                                        </script>
+                                        </div>
+                                </div>
+                        </div>
+<!-- answer2 -->                           
+                        <div id="answer2" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+			                            <p>Create a webpage that contains a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. Your results should be displayed using alerts or a form textarea or a div element.</p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                       
+                                        <input type="text" id="answer2_number1">
+                                        <input type="text" id="answer2_number2">
+                                        <input type="text" id="answer2_number3">
+                                        <button onClick="runNumbers();" id="submitNumbers">Submit</button>
+                                    <script>
+                                        
+                                            function runNumbers(){
+
+                                                var n1 = parseInt(document.getElementById("answer2_number1").value),
+                                                    n2 = parseInt(document.getElementById("answer2_number2").value),
+                                                    n3 = parseInt(document.getElementById("answer2_number3").value);
+                                                // sum
+                                                var sum = n1 + n2 + n3;
+                                                var product = n1 * n2 * n3;
+                                                var average = sum/3;
+                                                var minimum = Math.min(n1,n2,n3);
+                                                var maximum = Math.max(n1,n2,n3);
+                                                alert( "sum " + sum + ", product " + product + ", average " + average + ", minimum " + minimum + ", maximum " + maximum);
+                                            }
+                                        
+                                    </script>
+                                </div>
+                        </div>
+           </div>
+<!-- answer3 -->                           
+                        <div id="answer3" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+			                            <p>Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros. For input, use form text boxes. Your results should be displayed using a form textarea or a div element. Define a 'Click to Fade Results' button on the form. Use jQuery to define a ready handler that defines a click event handler for the button, such that clicking the button fades the results in the textarea.</p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                                                                      
+                                            <input type="text" id="answer3_number1">
+                                            <input type="text" id="answer3_number2">
+                                            <input type="text" id="answer3_number3">
+                                            <input type="text" id="answer3_number4">
+                                            <input type="text" id="answer3_number5">
+
+                                            <button onClick="processNumbers();" id="submitNumbers">Process</button>
+                                            <br/>
+                                            <button id="fadeNumbers">Click to Fade Results</button>
+
+                                            <textarea style="width:80%" id="display"></textarea>
+                                            <script>
+
+                                                $(document).ready(function(){
+                                                  $("#fadeNumbers").click(function(){
+                                                    $("#display").fadeTo("slow",0.25);
+                                                  });
+                                                });
+
+                                                function processNumbers(){
+
+                                                    var numbers = [ 
+                                                                    // 0
+                                                                    parseInt(document.getElementById("answer3_number1").value),
+                                                                    // 1
+                                                                    parseInt(document.getElementById("answer3_number2").value),
+                                                                    // 2
+                                                                    parseInt(document.getElementById("answer3_number3").value),
+                                                                    // 3
+                                                                    parseInt(document.getElementById("answer3_number4").value),
+                                                                    // 4
+                                                                    parseInt(document.getElementById("answer3_number5").value)
+                                                                ];
+                                                    console.log(numbers);
+
+
+                                                    // sum
+                                                    //console.log(numbers[3]);
+                                                    // count of the negative numbers, the number of positive numbers, and the number of zeros.
+
+                                                    var negativeNumbers = 0, positiveNumbers = 0, zeroes = 0;
+
+                                                    for (var i = numbers.length - 1; i >= 0; i--) {
+
+                                                        if(numbers[i] < 0){
+                                                            negativeNumbers += 1;
+                                                        }else if(numbers[i] > 0){
+                                                            positiveNumbers += 1;
+                                                        }else{
+                                                            zeroes +=1;
+                                                        }
+                                                    }
+                                                    var htmlForm = document.getElementById("display");
+                                                    htmlForm.value = "negative numbers : " + negativeNumbers + ", positive numbers: " + positiveNumbers + ", zeroes: " + zeroes;
+
+
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+<!-- answer4 -->                           
+                        <div id="answer4" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+                                        <p>Create a webpage that contains a script that calculates the squares and cubes of the numbers 1 to 6 and outputs text that displays (using document.write statements) the resulting values in a table format. Right below this table on the same page, use a script containing getElementById and innerHTML, and a form button to create and write a similar table of squares and cubes using numbers 7-10. When the user clicks this button then the table should be generated right below it. Here is a sample display before the submit button is clicked. Here is a sample display after the submit button is clicked. (Note: The scripts do not require any input from the user. Remember to also right justify the integers.)</p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                               
+                                            	<div id="container">
+	                                                <table id="display">
+                                                        <tr>
+                                                            <th>Number</th>
+                                                            <th>Square</th>
+                                                            <th>Cube</th>
+                                                        </tr>
+                                                            <script>
+                                                            for(var i=1; i <= 6;i++){
+                                                                document.write("<tr>");
+                                                                document.write("<td>" + i + "</td>");
+                                                                document.write("<td>" + i*i + "</td>");
+                                                                document.write("<td>" + i*i*i + "</td>");
+                                                                document.write("</tr>");
+                                                            }
+                                                                document.getElementById("container").innerHTML +='</table>'; function generate (){
+                                                                    
+                                                                    document.getElementById("display2").innerHTML += "<tr><th>Number</th><th>Square</th><th>Cube</th></tr>";
+
+                                                                    for(var i=7; i <= 10;i++){
+                                                                   document.getElementById("display2").innerHTML += ('<tr><td>' + i + '</td><td>' + i * i +"</td><td>" + i*i*i +"</td></tr>");
+                                                                        }
+
+			                                                 }
+			                                             </script>
+                                                        <table id="display2">
+
+                                                        </table>
+                                                        </table>
+	                                            </div>
+                                                <button onClick="generate()">Click to display table</button>
+                                    </div>
+                                </div>
+                        </div>
+           
+    </section>
+           
+           <section id="footer section-padding">
+              <div class="container">
+                   <div class="row">
+                   <div class="col-sm-12 text-center">
+                       <div id="lastupdate">
+                           <script>
+                            var dateModified = document.lastModified;
+                            mydate = dateModified.slice(0,16);
+                            document.write("Last updated: " + mydate);
+                           </script>
+                           <p class="small">created by Phraew P. (Patty)</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+    </section>   
 <script src="custom.js" type="text/javascript"></script>
+<script src="HW2.js" type="text/javascript"></script>
+
+</body>
 </html>
