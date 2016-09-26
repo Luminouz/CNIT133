@@ -1,8 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url('http://fonts.googleapis.com/css?family=Indie+Flower');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 .box {
   -webkit-border-radius: 10px;
@@ -28,6 +24,10 @@ body {
     background: #333;
     position: absolute;
     overflow: auto;
+}
+
+h1 {
+    color: #25cbf5;
 }
 
 .icon-1, .icon-2, .icon-3 {
@@ -81,13 +81,13 @@ body {
 }
 
 .icon-1.a {
-    transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 .icon-3.b {
-    transform: rotate(-40deg);
+  transform: rotate(-40deg);
 }
 .icon-2.c {
-    opacity: 0;
+  opacity: 0;
 }
 
 .clear {
@@ -252,34 +252,203 @@ p.wr3 {
 
 }
 
-h1 {
-    font-size: 60px;
-    color: #25cbf5;
-    animation: shotup 600ms ease-in-out;
-    animation-delay: 300ms;
-    margin-bottom: -5px;
-  }
-
-h2 {
-    font-size: 30px;
-    color: #fff;
-  }
-
-h3 {
-    font-size: 20px;
-    color: #fff;
-    line-height: 20px;
-  }
-
-#lastupdate {
-    color: #fff;
-    text-align: center;
+.block {
+  display: block;
 }
 
-.content-hom h1{
-    font-size: 36px;
-    color: #25cbf5;
-    animation: shotup 600ms ease-in-out;
-    animation-delay: 300ms;
-    margin-bottom: -5px;
+.overlay {
+  background: rgba(255, 255, 255, 0.77);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.global-modal {
+  visibility: hidden;
+  padding-top: 10px;
+}
+
+.global-modal_contents {
+  background: #FFF;
+  -webkit-box-shadow: 0 0 8px 2px rgba(182, 182, 182, 0.75);
+  -moz-box-shadow: 0 0 8px 2px rgba(182,182,182, 0.75);
+  -o-box-shadow: 0 0 8px 2px rgba(182,182,182,0.75);
+  box-shadow: 0 0 8px 2px rgba(182, 182, 182, 0.75);
+  width: 50%;
+  position: absolute;
+  left: 42%;
+  margin-left: -16%;
+  top: 15%;
+  min-height: 850px;
+}
+    
+.global-modal-header{
+  border-bottom: 1px solid #ccc;
+}
+    
+.global-modal-header p{
+  color: #333;
+  text-align: left;
+   margin: 20px;
+}
+
+.global-modal p{
+  color: #333;
+  text-align: left;
+  left: 10px;
+}
+    
+.global-modal-header .mobile-close{
+  display: none;
+}
+
+    
+.global-modal-body{
+  color: #333;
+  width: 80%;
+  height: 225px;
+  position: relative;
+  top: 55px;
+  margin: 20px;
+  left: 10%;
+}
+
+.global-modal_close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  text-decoration: none;
+  display: none;
+}
+
+.global-modal-show {
+  visibility: visible;
+}
+
+.global-modal-transition {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.global-modal-show .global-modal-transition {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media (max-width: 1139px){
+  .global-modal p{
+    text-align: center;
+    width: 100%;
+    display:block;
+    float: none;
+    margin: 0 auto;
   }
+  .global-modal:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+@media(max-width: 1027px){
+  .global-modal-header h3{
+    font-size: 18px;
+  }
+}
+@media (max-width : 767px) {
+  
+  .global-modal_contents {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .global-modal-header h3{
+    font-size: 22px;
+  }
+  .global-modal-header .mobile-close{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    curson: pointer;
+  }
+  .global-modal_close {
+    display: block;
+  }
+  
+  .global-modal-transition {
+    -webkit-transform: translateX(-0) translateY(150%);
+    -moz-transform: translateX(-0) translateY(150%);
+    -ms-transform: translateX(-0) translateY(150%);
+    transform: translateX(-0) translateY(150%);
+  }
+  
+}
+@media (max-width: 495px){
+  .global-modal-header h3{
+    font-size: 18px;
+  }
+}
+@media (max-width: 415px){
+  .global-modal-header h3{
+    font-size: 15px;
+  }
+} 
+
+</* homework3 */>
+
+.global-modal-body table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-left: auto;
+	margin-right: auto;
+    padding: 50%;
+    left: 20%;
+}
+
+.global-modal-body thead tr th{
+	font-weight: bold;
+	padding: 10px;
+	background: #25cbf5;
+}
+
+.global-modal-body tbody tr td {
+	text-align: left;
+	padding: 10px;
+
+}
+
+.align {
+	text-align: left;
+}
+
+input {
+    color: #25cbf5;
+    background-color: #fff;
+    border: #333 solid .25px;
+	text-align: center;
+    margin: 5px;
+}
+
+button {
+    color: #25cbf5;
+    background-color: #fff;
+    border: #333 solid .25px;
+	text-align: center;
+    margin: 5px;
+}
+
+
+
