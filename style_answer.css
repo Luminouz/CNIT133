@@ -348,7 +348,7 @@ p.wr3 {
 
 @media (max-width: 1139px){
   .global-modal p{
-    text-align: center;
+    text-align: left;
     width: 100%;
     display:block;
     float: none;
