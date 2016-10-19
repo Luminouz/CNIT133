@@ -40,9 +40,7 @@ $(document).ready(function() {
     });
 });
 	
-
-
-
+// answer 1
 
 function calculateSumProduct1() {
 	var sum = 0;
@@ -76,6 +74,8 @@ function calculateSumProduct2() {
 
 }
 
+// answer 2
+
 function calculateSalary() {
 
 	var gross = "Gross Salary";
@@ -102,6 +102,7 @@ function calculateSalary() {
 	}
 
 }
+
 
 function reset() {
 	document.forms["salary"].reset();
@@ -163,6 +164,7 @@ function calculateSales() {
 
 }
 
+// answer 5
 
 function findList() {
 	var text = parseInt(document.forms["list"].elements["choose"].value);
@@ -201,6 +203,8 @@ function findList() {
 	
 
 }
+
+// answer 6
 
 function christmas() {
 
