@@ -8,11 +8,11 @@ $(document).ready(function() {
 	christmas();
 	interest();
 
-	$(".dropdown").click(function() {
-		$(".hide").slideToggle("slow");
+	$("#slide").click(function() {
+    $("#hide").slideToggle("slow");
 	});
 
-	$("#part3container tr:even").css("background-color", "##fed766");
+	$("#part3container tr:even").css("background-color", "#25cbf5");
 	$("#part3container tr:odd").css("background-color", "#ffffff");
 
 	$("button").click(function(){
@@ -311,4 +311,62 @@ function lyrics(number) {
 	}
 	return output;
 	}
+
+// answer Extra Credit
+
+$(document).ready(function(){
+	'use strict'; 
+	
+$("#square").validate({
+// Rules for each input item
+rules: 
+{
+	size: { required: true, number: true, range: [2,10] }
+}, 
+messages: {
+	
+	}, 
+	
+errorPlacement: function(error, element) {
+    error.appendTo('#error'); 
+}
+//,
+});
+
+});
+
+function process() {
+	'use strict'; 
+	
+	if ($("#square").valid()) { 
+	
+	var htmlOutput = ""; 
+	var _size, size; 
+	var i, j; 
+	
+	
+	_size = document.getElementById("size").value; 
+	
+	size = parseInt(_size); 
+	
+	for (i = 1; i <= size; i++) {
+			
+		for (j = 1; j <= size; j++) {
+			
+			if (i == 1 || i == size || j==1 || j==size) {
+				htmlOutput += "* "; 	
+			}
+			
+			else {	
+			htmlOutput += " &nbsp; ";
+			}
+	
+		}
+		
+		htmlOutput += "<br>"; 
+	}
+	
+	document.getElementById("GetSquare").innerHTML = htmlOutput; 
+	}
+}
 
