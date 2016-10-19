@@ -455,5 +455,8 @@ button {
     margin: 5px;
 }
 
+#listError {
+    color: #333;
+}
 
 

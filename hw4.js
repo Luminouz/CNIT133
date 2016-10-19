@@ -166,6 +166,26 @@ function calculateSales() {
 
 // answer 5
 
+$(document).ready(function(){
+    
+$("#list").validate({
+// Rules for each input item
+rules: 
+{
+	size: { required: true, number: true, range: [1,3] }
+}, 
+messages: {
+	
+	}, 
+	
+errorPlacement: function(error, element) {
+    error.appendTo('#listError'); 
+}
+//,
+});
+
+});
+
 function findList() {
 	var text = parseInt(document.forms["list"].elements["choose"].value);
 	var output ="";
@@ -199,9 +219,6 @@ function findList() {
 		}
 	document.getElementById("listResult").innerHTML = output;
 	}
-
-	
-
 }
 
 // answer 6
