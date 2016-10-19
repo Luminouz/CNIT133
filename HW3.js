@@ -1,38 +1,47 @@
-function calculateGrade() {
-	var num1, num2, num3, avg, letter;
-	num1 = parseInt(document.forms["grades"].elements["num1"].value);
-	num2 = parseInt(document.forms["grades"].elements["num2"].value);
-	num3 = parseInt(document.forms["grades"].elements["num3"].value);
-	num4 = parseInt(document.forms["grades"].elements["num4"].value);
+/* answer 1*/
+// JavaScript Document
 
-	if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
-		alert("Please enter a number");
+$(document).ready(function(){
+	'use strict'; 
 
-	} else if (num1<0 || num1>100 || num2<0 ||num2>100 || num3<0 || num3>100 || num4<0 || num4>100) {
-		alert ("Please enter grades in the range 0-100");
+	$( ".draggable" ).draggable({
+  		opacity: 0.20
+		});
+});
 
-	} else {
 
-		avg = (0.5*num1)+(0.2*num2)+(0.2*num3)+(0.1*num4);
+function processForLoop() {
+	'use strict'; 
 
-		function letterGrade(avg) {
-		if (avg >= 90) {
-			letter = "A";
-		} else if (avg >= 80) {
-			letter = "B";
-		} else if (avg >= 70) {
-			letter = "C";
-		}else if (avg >= 60) {
-			letter = "D";
-		} else {
-			letter = "F";
-		}
-		}
-		letterGrade(avg);
-		document.forms["grades"].elements["result"].value = "Final Average: "+avg.toFixed(0)+"\nGrade: "+letter;
+var product=1; 
+var sum=0; 
+
+	for (var number = 5; number <= 20; number += 3) {	
+		product *= number;
+		sum += number;
 	}
+	
+	document.forms["forloop"].elements["result1"].value = ("The product is " + product + ".\n The sum is " + sum + "."); 
 }
 
+function processWhileLoop() {
+	'use strict'; 
+
+var number = 3; 
+var product = 1; 
+var sum = 0; 
+
+	while (number <= 31) {
+		product *= number;
+		sum += number;  
+		number += 4; 
+	}
+	
+	document.forms["whileloop"].elements["result2"].value = ("The product is " + product + ".\n The sum is " + sum + "."); 
+}
+
+
+/* answer 2*/
 function calculateSales() {
 	var num1, num2, num3, num4, total, revenue;
 	num1 = parseInt(document.forms["sales"].elements["num1"].value);
@@ -51,6 +60,7 @@ function calculateSales() {
 
 }
 
+/* answer 3*/
 function checkPal() {
 	var num;
 	num = document.forms["palindrome"].elements["pal"].value;
@@ -69,6 +79,7 @@ function checkPal() {
 	}
 }
 
+/* answer 4*/
 function convert() {
 	var c, f, calcC, calcF;
 	c = parseInt(document.forms["temp"].elements["celsius"].value);
@@ -88,6 +99,7 @@ function convert() {
 
 }
 
+/* answer 5*/
 function multiply() {
 
 	var input = parseInt(document.forms["multi"].elements["answer"].value);
@@ -114,7 +126,7 @@ function generateNumbers() {
 }
 
 
-
+/* answer 6*/
 function calculateCredit() {
 	var account = parseInt(document.forms["credit"].elements["account"].value);
 	var balance = parseInt(document.forms["credit"].elements["balance"].value);

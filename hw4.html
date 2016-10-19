@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CNIT133: Homework 4</title>
+<!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--JQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>    
+<!--fontawesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--cssstlyesheet-->
+    <link href='owl.carousel.css'rel='stylesheet' type='text/css'> 
+    <link href='magnific-popup.css' rel='stylesheet' type='text/css'>
+    <link href='animate.css' rel='stylesheet' type='text/css'>    
+    <link href='style_answer.css' rel='stylesheet' type='text/css'>
+	
+</head>
+ 
+
+<header>
+   <div class="hamburger-icon" id="icon">
+       <div class="icon-1" id="a"></div>
+       <div class="icon-2" id="b"></div>
+       <div class="icon-3" id="c"></div>
+       <div class="clear"></div>
+    </div>
+  
+<nav id="nav">
+           <div class="navbar"> 
+               <ul>
+                   <li><a href="hw1.html">homework 1</a></li>
+                   <li><a href="hw2.html">homework 2</a></li>
+                   <li><a href="HW3.html">homework 3</a></li>
+                   <li><a href="hw4.html">homework 4</a></li>
+                   <li><a href="#">homework 5</a></li>
+                   <li><a href="#">homework 6</a></li>
+                   <li><a href="#">homework 7</a></li>
+                   <li><a href="#">homework 8</a></li>
+                </ul>
+            </div>
+  
+</nav>
+</header>
+   
+<body>
+       <section id="content-home">
+           	<div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <div class="section-heading heading-padding">
+                            <h1>CNIT 133: JavaScript</h1>
+                            <p>fall 2016</p>
+                            <h1>Homework 4:<br>Looping Statements</h1>
+                        </div>
+                    </div>
+               </div>
+           </div>
+                        
+           <div class="section-padding">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer1"><i class="fa fa-2x"> 1</i></a>
+                                    <h3 class="text-uppercase">For Statement</h3>
+                                    <p>a.Calculates the product and sum of every third integer from 5 to 20 <br> b.Calculate the Product and Sum of every fourth integer from 3 to 31 inclusive </p>
+                            </div>
+			            </div>
+                       
+                        <div class="col-sm-6 text-center">
+                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer2"><i class="fa fa-2x"> 2</i></a>
+                                    <h3 class="text-uppercase">Gross Pay</h3>
+                                    <p>Display the gross pay for six employees. The company pays "straigt time" for the first 40 hours worked by each employee and pays "time and a half" for all hours worked in excess of 40 hours.</p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer3"><i class="fa fa-2x"> 3</i></a>
+                                    <h3 class="text-uppercase">Compound Interest</h3>
+                                    <p>Calculate compound interest on a principal of $1000 for interest rates of 5, 6, 7, 8, 9, and 10%, for years 1 through 10.</p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> 4</i></a>
+                                    <h3 class="text-uppercase">Switch Statement</h3>
+                                    <p>A mail-order house sells five different products whose retail prices are as follows: product 1, $2.98, product 2, $4.50, product 3, $9.98, product 4, $4.49, product 5, $6.87. </p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer5"><i class="fa fa-2x"> 5</i></a>
+                                    <h3 class="text-uppercase">Ordered and Unordered Lists</h3>
+                                    <p>Script show a form text box for one of three different list formats. Use jQuery to show/hide instructions and validate input data. </p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer6"><i class="fa fa-2x"> 6</i></a>
+                                    <h3 class="text-uppercase">Twelve Days of Christmas</h3>
+                                    <p>Script shows repetition and switch statements to print the song "The Twelve Days of Christmas". One switch statement should be used to print the day (i.e., "First," "Second," etc.). </p>
+                            </div>
+			            </div>
+			            
+			            <div class="col-sm-6 text-center">
+                           <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
+                                  <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> extra</i></a>
+                                    <h3 class="text-uppercase">Square Maker</h3>
+                                    <p>Create a webpage that contains a script that reads in the size of the side of a square and displays a hollow square of that size constructed of asterisks. Your script should work for squares of all side sizes between 2 and 10.</p>
+                            </div>
+			            </div>
+			        </div>
+                </div>
+           </div>
+<!-- answer1 -->                    
+                        <div id="answer1" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>			       
+			                            <p> 1a: Create a webpage that contains a script, using the for statement, that calculates the product and sum of every third integer from 5 to 20 inclusive and then displays the results, along with some accompanying text.
+                                        <br> 1b: On the same webpage as Part 1a, create a script, using the while or do while statement, that calculates the product and sum of every fourth integer from 3 to 31 inclusive and then displays the results, along with some accompanying text.</p>
+                                    </div>
+                                        <div class="global-modal-body">
+                                            <p id="part1answer1"></p><br><p id="part1answer2"></p>
+                                    </div>    
+                                            <div class="ui-widget-content draggable">
+                                                <p>Drag me around</p>
+                                            </div>
+                                </div>
+                           </div>
+<!-- answer2 -->                           
+                        <div id="answer2" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+			                            <p>A large company pays its salespeople on a commission basis. The salespeople receive $200 per week, plus 9% of their gross sales for that week. For example, a salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9% of $5000, or a total of $650. You have been supplied with a list of the items sold by each salesperson. The value of these items are as follows:p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                        <form name="salary">
+                                            <table>
+                                            <tr id="0">
+                                                <th>Employee</th>
+                                                <th>Hours Worked</th>
+                                                <th>Hourly Rate</th>
+                                            </tr>
+                                            <tr id="1">
+                                                <td>Employee1</td>
+                                                <td><input type="text" name="e1a" size="10"></td>
+                                                <td><input type="text" name="e1b" size="10"></td>	
+                                            </tr>
+                                            <tr id="2">
+                                                <td>Employee2</td>
+                                                <td><input type="text" name="e2a" size="10"></td>
+                                                <td><input type="text" name="e2b" size="10"></td>	
+                                            </tr>
+                                            <tr id="3">
+                                                <td>Employee3</td>
+                                                <td><input type="text" name="e3a" size="10"></td>
+                                                <td><input type="text" name="e3b" size="10"></td>	
+                                            </tr>
+                                            <tr id="4">
+                                                <td>Employee4</td>
+                                                <td><input type="text" name="e4a" size="10"></td>
+                                                <td><input type="text" name="e4b" size="10"></td>	
+                                            </tr>
+                                            <tr id="5">
+                                                <td>Employee5</td>
+                                                <td><input type="text" name="e5a" size="10"></td>
+                                                <td><input type="text" name="e5b" size="10"></td>	
+                                            </tr>
+                                            <tr id="6">
+                                                <td>Employee6</td>
+                                                <td><input type="text" name="e6a" size="10"></td>
+                                                <td><input type="text" name="e6b" size="10"></td>	
+                                            </tr>
+                                            </table>
+                                            <br>
+	                                    <input type="button" onclick="calculateSalary()" value="CALCULATE">
+	                                    <input type="reset" value="RESET" onclick="reset()">
+	                               </form>
+                                </div>
+                            </div>
+                        </div>
+<!-- answer3 -->                           
+                        <div id="answer3" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+			                            <p>Create a webpage containing a script that will determine whether a department-store customer has exceeded the credit limit on their charge account. 
+			                            <br>For input, the following facts should be available in form input text boxes:
+			                            <br> a) Account number
+                                        <br> b) Balance at the beginning of the month
+                                        <br> c) Total of all items charged by this customer this month
+                                        <br> d) Total of all credits applied to this customer's account this month
+                                        <br> e) Allowed credit limit
+                                        <br>Validate whether the account number has been entered and that the amount items are numeric. If there is an error then display an error message using an alert, innerHTML, or jQuery.</p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                        	<div id="part3container"></div>                  
+                                    </div>
+                                </div>
+                            </div>
+<!-- answer4 -->                           
+                        <div id="answer4" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+                                        <p>A palindrome is a number or a text phrase that reads the same backward and forward. For example: 12321, 55555, 11611, 45554. Create a webpage that contains a script that inputs a five-digit integer (not starting with zero) that determines and outputs a message stating whether or not it's a palindrome. If the number is not five digits long, display an error message indicating the problem to the user. Utilize jQuery UI for displaying a button that will be used to display the instruction: "Input a five-digit integer (not starting with zero) to display if it is a palindrome, not a palindrome, or an input error."</p>
+                                    </div>
+                                    <div class="global-modal-body">
+                                    <form name="sales">
+                                            <table>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Quantity</th>
+                                                    <th>Price</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" name="row1" value="1" disabled="disabled" size="10"></td>
+                                                    <td><input type="text" name="row1qty" size="10"></td>
+                                                    <td>2.98</td>
+                                                    <td><input type="text" name="row1amount" size="10"></td>	
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" name="row2" value="2" disabled="disabled" size="10"></td>
+                                                    <td><input type="text" name="row2qty" size="10"></td>
+                                                    <td>4.50</td>
+                                                    <td><input type="text" name="row2amount" size="10"></td>	
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" name="row3" value="3" disabled="disabled" size="10"></td>
+                                                    <td><input type="text" name="row3qty" size="10"></td>
+                                                    <td>9.98</td>
+                                                    <td><input type="text" name="row3amount" size="10"></td>		
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" name="row4" value="4" disabled="disabled" size="10"></td>
+                                                    <td><input type="text" name="row4qty" size="10"></td>
+                                                    <td>4.49</td>
+                                                    <td><input type="text" name="row4amount" size="10"></td>	
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" name="row5" value="5" disabled="disabled" size="10"></td>
+                                                    <td><input type="text" name="row5qty" size="10"></td>
+                                                    <td>6.89</td>
+                                                    <td><input type="text" name="row5amount" size="10"></td>	
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Total Amount</td>
+                                                    <td><input type="text" name="totalAmount" size="10" disabled="disabled"></td>
+                                                </tr>
+                                            </table>
+                                        <br>
+                                        <input type="button" onclick="calculateSales()" value="CALCULATE">
+                                        <input type="reset" value="RESET">
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>
+ <!-- answer5 -->
+                      <div id="answer5" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header" id="instructions">
+			                            <span class="mobile-close"> X </span>
+                                        <p>In the Pick a list style field, enter:
+                                            <br>&#10122; option 1 for an unordered list
+                                            <br>&#10123; option 2 for a numbered list
+                                            <br>&#10124; option 3 for a letter list               
+                                        <br>Once you've entered a single option number click on the Display List button to display your list choice below.</p>
+                                    </div>
+                                        <button id="showhide">Click Here to Show/Hide Instructions</button>
+                                    <div class="global-modal-body">                
+	                                    <div class="hide">Please type in "1" for unordered list, "2" for ordered number list, or "3" for ordered letter list</div><br>
+
+	                                    <form name="list" id="list">
+                                            <p>Which list would you like?</p>
+                                            <input type="text" name="choose" placeholder="1-3" size="10">
+                                            <input type="button" onclick="findList()" value="GENERATE">
+
+                                            <p id="listResult"></p>
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>  
+<!-- answer6 -->
+                      <div id="answer6" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <p id ="12days"></p>
+
+	                                   <div id="animate" style="background:#98bf21;height:100px;width:100px;position:relative; margin:0 auto;"><img src="santa.png" style="height:100px;width:100px"></div>
+	                                   
+	                                   <button type = "button">Animate!</button>
+                                    </div>
+                        </div> 
+<!-- extra -->
+                      <div id="answerEx" class="global-modal">
+			                <div class="overlay"></div>
+			                    <div class="global-modal_contents modal-transition">
+                                    <div class="global-modal-header">
+			                            <span class="mobile-close"> X </span>
+                                        <p>Create a webpage using form text boxes that:
+                                        <br>a) contains the function celsius, that returns the Celsius equivalent of a Fahrenheit temperature, using the calculation: C&deg; = 5/9 * (F - 32) 
+                                        <br>b) contains the function fahrenheit that returns the Fahrenheit equivalent of a Celsius temperature, using the calculation: F&deg; = (9/5 * C) + 32
+                                        <br>c) Use these functions to write a script that enables the user to enter either a Fahrenheit or a Celsius temperature and displays the Celsius or Fahrenheit equivalent.</p>
+                                    </div>
+                                    <div class="global-modal-body">                
+                                        <form name="makesquare" id="makesquare">
+                                            <br>
+                                            <h3>Enter the Size of the Square</h3>
+                                            <br>
+                                            <p>Input number between 2 and 10</p>
+                                            <br>
+                                            <label for="size"></label><input type="text" name="size" id="size"><input type="button" onClick="process()" value="Submit">
+                                            <br><br>
+                                            <div id="error"></div>
+                                            <br>
+                                            <div id="square" class="square"></div>
+
+                                            <br><br>
+                                        </form>
+                                    </div>
+                                </div>
+                        </div>  
+                                                                                                            
+    </section>
+           
+           <section id="footer section-padding">
+              <div class="container">
+                   <div class="row">
+                   <div class="col-sm-12 text-center">
+                       <div id="lastupdate">
+                           <script>
+                            var dateModified = document.lastModified;
+                            mydate = dateModified.slice(0,16);
+                            document.write("Last updated: " + mydate);
+                           </script>
+                           <p>created by Phraew P. (Patty)</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+    </section>
+<script>
+     $(function () {
+        $("#draggable").draggable();
+        });
+</script>   
+<script src="custom.js" type="text/javascript"></script>
+<script src="hw4.js" type="text/javascript"></script>
+
+</body>
+</html>
