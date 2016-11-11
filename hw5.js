@@ -77,7 +77,6 @@ function goToNewPage(myForm) {
 	     
 }
 // answer2
-
 $(document).ready(function(){
 	'use strict'; 
 
@@ -86,270 +85,85 @@ $(document).ready(function(){
     });
 	
 	});
-	
-	
-	var states = new Array(new Array()); 
-	
-	states[0] = ["AL", "Alabama", "Montgomery", "4,779,736"]; 
-	states[1] = ["AK", "Alaska", "Juneau", "710,231"]; 
-	states[2] = ["AZ", "Arizona", "Phoenix", "6,392,017"]; 
-	states[3] = ["AR", "Arkansas", "Little Rock", "2,915,918"]; 
-	states[4] = ["CA", "California", "Sacramento", "37,253,956"]; 
-	states[5] = ["CO", "Colorado", "Denver", "5,029,196"]; 
 
-function process() {
-	'use strict'; 
-	
-	var _input, input, errormsg, validator; 
-	
-	validator = 0; 
-	
-	_input = document.forms["states"].elements["input"].value; 
-	
-	input = _input.toUpperCase(); 
-	
-	errormsg = "Please enter correct spelling for state name or abbreviation.";
-	
-	
-	for (var i = 0; i < states.length; i++) {
-	
-	if ((input == states[i][0]) || (input == states[i][1].toUpperCase())) {
-		validator = 1; 
-		var index = i; 
-		printResults(index); 
+
+function goToNewPage(myForm) {
+	var mydest = myForm.destList.options[myForm.destList.selectedIndex].value;
+	window.location = mydest;
+}
+
+
+function stateInfo() {
+	var x = (document.getElementById("part3answer").value).toUpperCase();
+	var ab = ["AL", "AK", "AZ", "AR", "CA", "CO"];
+	var full = ['ALABAMA', 'ALASKA', 'ARIZONA', 'ARKANSAS', 'CALIFORNIA', 'COLORADO'];
+	var result = [['Alabama','Montgomery', '4,779,736'], ['Alaska', 'Juneau', '710,231'], ['Arizona','Phoenix','6,392,017'], ['Arkansas', 'Little Rock', '2,915,918'], ['California', 'Sacramento', '37,253,956'], ['Colorado','Denver','5,029,196']];
+
+	for (var i = 0; i < 5; i++) {
+		if (x == ab[i] || x == full[i]) {
+			for (var j = 0; j < 3; j++) {
+				document.getElementById("stateResult").innerHTML += result[i][j]+"<br>";
+			}
+			break;
 		}
 	}
-	
-	if (validator == 0) {
-	document.getElementById("error").innerHTML = "<br>" + errormsg; 	
-	}
+
 }
 
-function clearError() {
-		'use strict'; 
-		
-		document.getElementById("error").innerHTML = ""; 
-		
-	}
-	
-function printResults(index) {
-	'use strict'; 
-		
-		var j = index; 
-	
-		document.forms["states"].elements["abbr"].value = states[j][0]; 
-		document.forms["states"].elements["name"].value = states[j][1]; 
-		document.forms["states"].elements["cap"].value = states[j][2];
-		document.forms["states"].elements["pop"].value = states[j][3];
-}
+
 
 
 // answer3
 
-var base, commission; 
-base = 200; 
-commission = 0.09; 
+var a = 0; var b = 0; var c = 0; var d = 0; var e = 0; var f = 0; var g = 0; var h = 0; var i = 0;
 
-var counter = new Array(9); 
-counter = [0,0,0,0,0,0,0,0,0]; 
+var count = [a, b, c, d, e, f, g, h, i];
 
-$(document).ready(function(){
-	'use strict'; 
-	
-	$("#input").validate({
-	rules: 
-	{
-		sales: {required: true, number: true}
-	}, 
-	
-	errorPlacement: function(error, element) {
-    error.appendTo("#error"); // <- the default
+function salesStats() {
+	var salary = parseInt(document.forms["sales"].elements["sales"].value);
+	var total = 200 + 0.09 * salary;
+	document.forms["sales"].elements["income"].value = total;
+
+	if (total >= 200) {
+		total -= 200;
+	for (var i = 0; i < 9; i++) {
+		total -= 99.99;
+		if (total <= 0) {
+			count[i]++;
+			document.forms["sales"].elements["stats"].value = "$200-$299.99: "+count[0]+"\n$300-$399.99: "+count[1]+"\n$400-$499.99: "+count[2]+"\n$500-$599.99: "+count[3]+"\n$600-$699.99: "+count[4]+"\n$700-$799.99: "+count[5]+"\n$800-$899.99: "+count[6]+"\n$900-$999.99: "+count[7]+"\n$1000 and over: "+count[8];
+			break;
+		}
+		}
 	}
-	}); 
 	
-$("#clear").click(function() {
-	var validator = $("#input").validate(); 
-	validator.resetForm();
-	$("#error").html(""); 
-}); 
 
-}); 
-
-function process() {
-	'use strict'; 
-	
-	if ($("#input").valid()) { 
-	
-	var _sales, sales,  _salary, salary; 
-	_sales = document.getElementById("sales").value; 
-	sales = parseFloat(_sales); 
-
-	_salary = calcSalary(sales); 	
-	salary = _salary.toFixed(2); 
-	addSalaryRange(salary); 
-	document.getElementById("output").innerHTML = salary; 
-
-	}
-}
-
-function addSalaryRange(salary) {
-	'use strict'; 
-	
-	var pay = salary; 
-	
-	switch (true) {
-	
-	case (pay < 299.99): 
-	  
-		counter[0] += 1;   
-		document.forms["input"].elements["two"].value = counter[0];
-		break; 
-		
-	case (pay < 399.99): 
-	  
-	  	counter[1] += 1;  
-		document.forms["input"].elements["three"].value = counter[1];
-		break; 
-		
-	case (pay < 499.99): 
-	  	
-		counter[2] += 1;  
-		document.forms["input"].elements["fourhundred"].value = counter[2];
-		break;
-		
-	case (pay < 599.99): 
-	  	
-		counter[3] += 1;  
-		document.forms["input"].elements["fivehundred"].value = counter[3];
-		break; 
-	
-	case (pay < 699.99): 
-	  
-		counter[4] += 1;  
-		document.forms["input"].elements["sixhundred"].value = counter[4];
-		break; 
-		
-	case (pay < 799.99): 
-	  
-	  	counter[5] += 1;  
-		document.forms["input"].elements["sevenhundred"].value = counter[5];
-		break; 
-	
-	case (pay < 899.99): 
-	  
-	  	counter[6] += 1;  
-		document.forms["input"].elements["eighthundred"].value = counter[6];
-		break; 
-	
-	case (pay < 999.99): 
-	  
-	  	counter[7] += 1;  
-		document.forms["input"].elements["ninehundred"].value = counter[7];
-		break; 
-		
-	case (pay > 1000.00): 
-	  
-	  	counter[8] += 1;  
-		document.forms["input"].elements["thousand"].value = counter[8];
-		break; 
-	
-	
-	default:
-		break; 
-	
-	}
-}
-
-function calcSalary(grSales) {
-	'use strict'; 
-	
-	return base + (grSales * commission); 
-	
 }
 
 // answer4
 
-var count = new Array(10); 
-	count = [0,0,0,0,0,0,0,0,0,0]; 
-	
-var counter = 0; 
+function countDisplay() {
+	var count = 0;
+	var result = [];
+	var current;
+	for (var i = 1; i <= 10; i++) {
+		current = parseInt(document.forms["count"].elements[i].value);
+		if (current < 10 || current > 100) {
+			alert("Please enter a valid number in the range 10-100");
+			break;
+		} else {
+			count++;
+			if (result.indexOf(current) == -1) {
+				result.push(current);
+			}
 
-$(document).ready(function(){
-	'use strict'; 
-	
-	$("#numberreader").validate({
-// Rules for each input item
-rules: 
-{
-inputnum: { 
-			required: true, 
-			number: true,
-			range: [10,100]
-   		}
-},
-messages: {
-	 inputnum: {
-		range: "You must enter a number between 10 and 100."
-	}
-}, 
-
-errorPlacement: function(error, element) {
-    error.appendTo("#error"); // <- the default
-}
-
-});
-	
-$("#clear").click(function() {
-	var validator = $("#numberreader").validate(); 
-	validator.resetForm();
-	$("#output").html(""); 
-}); 
-
-	
-	
-	
-});
-
-function process() {
-	'use strict'; 
-	
-if ($("#numberreader").valid()) { 
-	
-	document.getElementById("output").innerHTML = ""; 
-
-	if (counter === 10) {
-	window.alert("You have already entered 10 numbers"); 	
-	}
-	
-	var number, duplicate; 
-	
-	duplicate = false; 
-	
-	number = document.getElementById("inputnum").value; 
-	
-	for (var i = 0; i < count.length; i++ ) {
-		if (number === count[i]) {
-		document.getElementById("output").innerHTML = "THIS IS A DUPLICATE"; 
-		duplicate = true;
 		}
-	}
-	
-	if (duplicate !== true) {
+		document.forms["count"].elements["countresult"].value = "Unique Numbers:"+result+"\nCount:"+count;
 
-		count[counter] = number; 
-		counter += 1; 
-	
 	}
-	
-	document.getElementById("result").innerHTML = ("You entered " + number + " as a number. You have entered " + counter + " numbers.");
-
-}
 
 }
 
 
-// alternative parameter passing - for array? 
-//<input type="button" value="Submit" onclick="onLoadConfigPress(document.forms[0].configname.value)" />
 
 
 // answerExtra
@@ -389,7 +203,6 @@ errorPlacement: function(error, element) {
 ////
 ////
 }); 
-
 
 
 

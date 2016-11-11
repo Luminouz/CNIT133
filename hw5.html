@@ -35,7 +35,7 @@
                    <li><a href="HW3.html">homework 3</a></li>
                    <li><a href="hw4.html">homework 4</a></li>
                    <li><a href="hw5.html">homework 5</a></li>
-                   <li><a href="#">homework 6</a></li>
+                   <li><a href="hw6.html">homework 6</a></li>
                    <li><a href="#">homework 7</a></li>
                    <li><a href="#">homework 8</a></li>
                 </ul>
@@ -233,27 +233,19 @@
                                             <br>
                                             <br>
                                         <form name="states">
-                                            <br>
                                             <input type="button" id="hideshow" value = "Click to Show / Hide Instructions">
                                             <div id="instructions"><br>
-                                                <h5>Enter a state abbreviation or name (lower or upper case is ok).</h5>
+                                            <h5>Enter a state abbreviation or name (lower or upper case is ok).</h5>
                                             </div>
                                             <br><br>
-                                            <label for="input"></label><input type="text" name="input" id="input" size="20"><input type="button" onClick="process()" value="State Info"><br><div id="error"></div>
-                                            <br>
-                                            <p id="result"></p>
-                                            <table>
-                                                <tr><th>State Abbr</th><th>State Name</th><th>Capital</th><th>Population</th></tr>
-                                                <tr>
-                                                    <td><label for="abbr"></label><input type="text" name="abbr" id="abbr" size="5"></td>
-                                                    <td><label for="name"></label><input type="text" name="name" id="name" size="15"></td>
-                                                    <td><label for="cap"></label><input type="text" name="cap" id="cap" size="15"></td>
-                                                    <td><label for="pop"></label><input type="text" name="pop" id="pop" size="15"></td>
-                                                </tr>
-                                            </table>
-                                            <br>
-                                            <input type="reset" onClick="clearError()" value="Reset">
-                                        </form>   
+                                            <form name="states">
+                                            <input type="text" name="answer" id="part3answer" size="10"><br>
+                                            <input type="button" onclick="stateInfo()" value="State Info"><br>
+                                        </form>
+
+                                        <p id="stateResult"></p>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -266,64 +258,22 @@
                                         <p>a webpage with a script (using an array of counters) that obtains the gross sales for each employee through a form and determines how many of the salespeople earned salaries in each of the following ranges):</p>
                                     </div>
                                     <div class="global-modal-body">
-                                    <form name="input" id="input">
-                                        <p>Enter the gross sales for each salesperson.</p>
-                                        <br>
+                                    <form name="sales">
                                         <table>
-                                            <tr>
-                                            <th>Gross Sales $ Amount</th>
-                                            </tr>
-                                            <tr>
-                                            <td> <label for="sales"></label><input type="text" name="sales" id="sales"></td>
-                                            <td> <input type="button" onClick="process()" value="Submit"></td>
-                                            </tr>
+                                        <tr>
+                                            <td>Gross Sales: </td>
+                                            <td><input type="text" name="sales" size="10"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gross Income: </td>
+                                            <td><input type="text" name="income" size="10"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Statistics: </td>
+                                            <td><textarea name="stats"  rows="10" cols="30"></textarea></td>
+                                        </tr>
+                                        <tr><input type="button" onclick="salesStats()" value="Submit"></tr>
                                         </table>
-                                        <br>
-                                        <div id="error"></div>
-                                        <br>
-                                        <table>
-                                            <tr><th>Salary Range</th><th># of Sales Persons</th></tr>
-                                            <tr>
-                                                <td>$200.00 - 299.99</td>
-                                                <td><label for="two"></label><input type="text" name="two" id="two" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$300.00 - 399.99</td>
-                                                <td><label for="three"></label><input type="text" name="three" id="three" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$400.00 - 499.99</td>
-                                                <td><label for="fourhundred"></label><input type="text" name="fourhundred" id="fourhundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$500.00 - 599.99</td>
-                                                <td><label for="fivehundred"></label><input type="text" name="fivehundred" id="fivehundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$600.00 - 699.99</td>
-                                                <td><label for="sixhundred"></label><input type="text" name="sixhundred" id="sixhundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$700.00 - 799.99</td>
-                                                <td><label for="sevenhundred"></label><input type="text" name="sevenhundred" id="sevenhundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$800.00 - 899.99</td>
-                                                <td><label for="eighthundred"></label><input type="text" name="eighthundred" id="eighthundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$900.00 - 999.99</td>
-                                                <td><label for="ninehundred"></label><input type="text" name="ninehundred" id="ninehundred" size="10"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>$1000 and over</td>
-                                                <td><label for="thousand"></label><input type="text" name="thousand" id="thousand" size="10"></td>
-                                            </tr>
-                                        </table>
-                                        <br><br>
-
-                                        <input type="reset" id="clear" value="Reset">
-
                                     </form>
                                     </div>
                                 </div>
@@ -337,21 +287,26 @@
                                         <p>a webpage that contains a script, using a one-dimensional array to solve the following problem: Read in 10 numbers, each of which is between 10 and 100. I suggest using and re-using one input text box and displaying a count of the number of numbers entered. Another alternative would be having 10 input text boxes. As each number is read, print it only if it is not a duplicate number that has already been read.</p>
                                     </div>
                                     <div class="global-modal-body">
+                                    <p>Please enter 10 valid numbers in the range 10-100</p>
                                     
-                                    <form name="numberreader" id="numberreader">
-                                        <h3>Enter up to ten numbers between 10 and 100</h3>
+                                   <form name="count">
+                                        <table>
+                                        <tr><input type="text" name="1" size="10"></tr>
+                                        <tr><input type="text" name="2" size="10"></tr>
+                                        <tr><input type="text" name="3" size="10"></tr>
+                                        <tr><input type="text" name="4" size="10"></tr>
+                                        <tr><input type="text" name="5" size="10"></tr>
+                                        <tr><input type="text" name="6" size="10"></tr>
+                                        <tr><input type="text" name="7" size="10"></tr>
+                                        <tr><input type="text" name="8" size="10"></tr>
+                                        <tr><input type="text" name="9" size="10"></tr>
+                                        <tr><input type="text" name="10" size="10"></tr>
                                         <br>
-                                        <label for="inputnum"></label><input name="inputnum" id="inputnum"><input type="button" onClick="process();" value="Submit">
-                                        <br><br>
-                                        <p id="error"></p>
-                                        <br>
-                                        <p id="result"></p>
-                                        <br><br>
-                                        <p id="output"></p>
-
-                                        <br>
-                                        <input type="reset" id="clear" value="Reset">
-
+                                        <input type="button" onclick="countDisplay()" value="Count">
+                                        <input type="reset" value="RESET">
+                                        <br>	
+                                        <textarea name="countresult"  rows="4" cols="60"></textarea>
+                                       </table>
                                     </form>
                                     </div>
                                 </div>

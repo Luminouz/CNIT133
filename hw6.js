@@ -1,148 +1,64 @@
-// answer1
 
-$(document).ready(function(){
-	'use strict'; 
-	
-	//$.validator.addMethod("fourDecimals", function(value, element) {
-//    return this.optional(element) || /^\d+(\.\d{0,3})?$/.test(value); 
-//}, "Please enter a correct number, format xxxx.xxx");
-//	
-	$("#floatnum").validate({
-	rules: 
-	{
-		input: {required: true, number: true}
-	}, 
-	
-	errorPlacement: function(error, element) {
-    error.appendTo("#error"); // <- the default
+$(document).ready(function() {
+	time();
+
+
+});
+
+//answer1
+function round() {
+	var input = parseFloat(document.forms["rounding"].elements["number"].value);
+	var decimalsPlaces = (document.forms["rounding"].elements["number"].value).split(".")[1].length;
+	var nearestInt = 0;
+	var nearestSqrt = 0;
+	var nearestTen = 0;
+	var nearestHun = 0
+	var nearestThou = 0;
+	if (decimalsPlaces < 4) {
+		alert("Please enter a number with at least 4 decimal places");
+	} else {
+		nearestInt = (Math.round(input))
+		nearestSqrt = (Math.round(Math.sqrt(input)))
+		nearestTen = (Math.floor( input * 10 + .5 ) / 10).toFixed(2); 
+		nearestHun = (Math.floor( input * 100 + .5 ) / 100).toFixed(3); 
+		nearestThou = (Math.floor( input * 1000 + .5 ) / 1000).toFixed(4); 
 	}
-	
-	}); 
-	
-	
-}); 
+	document.forms["rounding"].elements["result"].value = "Original number: "+input+"\nRounded to nearest integer: "+nearestInt+"\nSquare root: "+nearestSqrt+ "\nRound to the nearest tenth: "+nearestTen+ "\nRound to the nearest hundred: "+nearestHun+ "\nRound to the nearest thousand: "+nearestThou;
 
-	
-
-function process() {
-	'use strict'; 
-	
-	if ($("#floatnum").valid()) { 
-	
-	var _number, number, roundInt, _sqRt, sqRt, _tenths, tenths, _hundredths, hundredths, _thousandths, thousandths; 
-
-	_number	= document.getElementById("input").value; 
-	number = parseFloat(_number); 
-	
-	roundInt = Math.round(number); 
-	_sqRt = Math.sqrt(number); 
-	sqRt = Math.round(_sqRt); 
-	
-	_tenths = Math.floor(number*10 + 0.5)/10; 
-	tenths = _tenths.toFixed(1); 
-	
-	_hundredths = Math.floor(number*100 + 0.5)/100; 
-	hundredths = _hundredths.toFixed(2); 
-	
-	_thousandths = Math.floor(number*1000 + 0.5)/1000; 
-	thousandths = _thousandths.toFixed(3); 
-	
-	
-	
-	
-	
-	
-	document.getElementById("results1").value = ("The inputted value was " + number + ".\nThe rounded number is " + roundInt + ". \nThe square root rounded to the nearest integer is " + sqRt + ". \nThe floating point number rounded to the nearest tenths position is " + tenths + ". \nThe floating point number rounded to the nearest hundredths position is " + hundredths + ". \nThe floating point number rounded to the nearest thousandths position is " + thousandths + "."); 
-	
-	}
 }
 
 
+//answer2
 
-// answer2
-
-
-function process() {
-	'use strict'; 
-	
-	//window.alert("Hey you clicked me!") 
-	
-	var text, searchChar, count; 
-	
-	text = document.getElementById("textinput").value; 
-	searchChar = document.getElementById("searchChar").value; 
-	count = 0; 
-	
-	for (var i = 0; i < text.length; i++) {
-	
-		if (text[i] == searchChar) {
-			count += 1; 
-		}	
+function searchLetter() {
+	var character = document.forms["search"].elements["char"].value;
+	var string = document.forms["search"].elements["string"].value;
+	var count = 0;
+	for (var i = 0; i < string.length; i++) {
+		if (string.charAt(i) == character) {
+			count++;
+		}
 	}
-	
-	if (count != 0) {
-	
-	document.getElementById("results").value = ("The character " + searchChar + " was found " + count + " times in the text string."); 
-	
+	if (count == 0) {
+		string = "Search character '"+character+"'' not found in text string!";
+	} else {
+		string = "Search character '"+character+"' found in text string "+count+" times";
 	}
-	
-	else {
-	
-	var noCharText = "<html>\n";
-noCharText += "<head>\n";
-noCharText += "<title>Search Character Not Found</title>\n";
-noCharText += "</head>\n";
-noCharText += "<body>\n";
-noCharText += "<div align='center'>\n";
-noCharText += "<p><b>Search character not found in text string!</p>\n";
-//noCharText += "<input type='button' value='Close Window' onclick='window.close()'>\n";
-noCharText += "</div>\n";
-noCharText += "</body>\n";
-noCharText += "</html>";
 
-	var noSearchChar = window.open("No Char Found", "",
-"width=300,height=100,top=350,left=500");
-
-
-noSearchChar.document.write(noCharText);
-
-noSearchChar.focus();
-	
-	
-	}
-	
+	var newWindow = window.open("","", "width=300,height=100,top=150,left=50");
+	newWindow.focus();
+	newWindow.document.write("<p>"+string+"</p>");
 }
 
-// answer3
 
-$(document).ready(function(){
-	'use strict'; 
-	
-	  $("#phone").mask('(000) 000-0000');
-	//$.validator.addMethod("fourDecimals", function(value, element) {
-//    return this.optional(element) || /^\d+(\.\d{0,3})?$/.test(value); 
-//}, "Please enter a correct number, format xxxx.xxx");
-//	
-	//$("#tel").validate({
-//	rules: 
-//	{
-//		phone: {required: true, number: true}
-//	}, 
-//	
-//	errorPlacement: function(error, element) {
-//    error.appendTo("#error"); // <- the default
-//	}
-//	
-//	}); 	
-	
-}); 
-
+//answer3
 
 window.onload=function() {
 'use strict'; 
 
 	dateformat(); 
 }; 
+
 
 
 function dateformat() {
@@ -173,61 +89,51 @@ function dateformat() {
 	
 }
 
+	
 
-function process() {
-	'use strict'; 
-	
-	//if ($("#tel").valid()) { 
-	
-	var phone, phoneSplit, localTel;
-	
-	phone = document.getElementById("phone").value; 
-	phoneSplit = phone.split(")");
-	localTel = phoneSplit[1].split("-"); 
-	
-	document.getElementById("areacode").value = phoneSplit[0] + ")"; 
-	document.getElementById("telnum").value = localTel[0] + "-" + localTel[1]; 
-	
-	//}
+function extract() {
+	var phoneString = document.forms["phone"].elements["input"].value;
+	phoneString = phoneString.replace("(","");
+	phoneString = phoneString.replace(")","");
+	phoneString = phoneString.replace("-"," ");
+	phoneString = phoneString.split(" ");
+	console.log(phoneString);
+	document.forms["phone"].elements["area"].value = phoneString[0];
+	document.forms["phone"].elements["rest"].value = phoneString[1]+phoneString[2];
 }
 
-// answer4
 
 
-function process() {
-	'use strict'; 
+//answer4
 
-	var textInput, text, result;
-	//var letters = new Array(); 
-	var letters = ["A", "B", "C", "D", "E", "F"]; 
-	var count = 0; 
-	
-	textInput = document.getElementById("textinput").value; 
-	text = textInput.toUpperCase(); 
-	
-	// need to use indexOf
-	
-	for (var i = 0; i < letters.length; i++){
-		for (var j = 0; j < text.length; j++) {
-			if (text[j] = letters[i]) {
-				
-			}
-		
-		
+function countFrequency() {
+	var string = document.forms["count"].elements["string"].value;
+	string = string.toLowerCase();
+	var array = [];
+	var count = 0;
+	var pos = -1;
+	for (var i = 0; i < string.length; i++) {
+		pos = i;
+		while (pos != -1) {
+			count++;
+			pos = string.indexOf(string.charAt(i), pos+1);
 		}
+		var item = "Character "+string.charAt(i)+": "+count;
+		array.push(item);
 	}
-	
-	result = text; 
-	document.getElementById("result").value = result; 
-	
+	console.log(array);
+	document.forms["count"].elements["result"].value = array;
 }
 
-// answer extra
+//answer extra
+
 
 function process() {
 	'use strict'; 
 	
 	window.alert("YOU HIT THE BUTTON"); 
 }
+
+
 
 

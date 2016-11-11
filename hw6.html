@@ -8,6 +8,7 @@
 <!--JQuery-->
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
 <!--fontawesome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -88,7 +89,7 @@
 			            
 			            <div class="col-sm-6 text-center">
                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
-                                  <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> 3</i></a>
+                                  <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> 4</i></a>
                                     <h3 class="text-uppercase">Counting Letters</h3>
                                     <p>a script that inputs several lines of text in a form textarea and uses String method indexOf to determine the total number of occurrences of each letter of the alphabet in the text</p>
                             </div>
@@ -117,24 +118,16 @@
                                             <br>d) round the floating-point number to the nearest hunderdths position
                                             <br>e) round the floating-point number to the nearest thousandths position</p>
                                     </div>
-                                        <div>
-                                            <form name="floatnum" id="floatnum">
-                                                <br>
-                                                <p>Enter a Floating Point Number with at least 4 Decimal Positions</p>
-                                                <br>
-                                                <p id="error"></p>
-                                                <br>
-                                                <label for="input"></label><input type="text" name="input" id="input"><input type="button" onClick="process()" value="Submit">
-                                                <br><br>
-                                                <p>RESULTS</p><br>
-                                                <textarea rows="8" cols="50" name="results" id="results"></textarea>
-
-
-
-                                            </form>
-                                            
-
-                                        </div>
+                                  
+                                    <form name="rounding">
+                                        
+                                        <p>Enter a number with at least 3 decimal places: <input type="text" name="number" size="10"></p>
+                                
+                                            <textarea name="result"  rows="4" cols="40"></textarea>
+                                                <input type="button" onclick="round()" value="Round">
+                                                <input type="reset" value="RESET">
+                                    </form>
+                                
                                 </div>
                         </div>
 <!-- answer2 -->                           
@@ -146,23 +139,21 @@
 			                            <p>a form textarea for the text and a form input box for the search character. If the search character is found within the text, display the number of occurrences of the search character in another form input box or a textarea. If the search character is not found within the text then display within a new window (using the window.open method), the message, 'Search character not found in text string!' along with the search character.<p>
                                     </div>
                                     <div class="global-modal-body">
-                                       <br><br>
-                                        <p>Enter Some Text Below and a Search Character</p>
-                                        <br>
                                         <form name="search">
-                                            <label for="textinput"></label><textarea rows="5" cols="50" name="textinput" id="textinput"></textarea>
-                                            <br><br>
-                                            <p>Search Character</p><label for="searchChar"></label><input type="text" name="searchChar" id="searchChar">
-                                            <br><br>
-                                            <input type="button" onClick="process()" value="Submit">
-                                            <br><br>
-                                            <textarea rows="2" cols="50" name="results" id="results"></textarea>
-                                        </form>
-                                    </div>
+                                            <table>
+                                            <tr><td>Enter a letter to search: <input type="text" name="char" size="10"></td></tr>
+                                            <tr><td>Enter texts: <textarea name="string"  rows="4" cols="40"></textarea></td></tr>
+                                            <tr><td>
+                                                <input type="button" onclick="searchLetter()" value="Search">
+                                                <input type="reset" value="RESET">
+                                            </td></tr>
+                                            </table>
+                                        </form>                
+                                   </div>
                                 </div>
                         </div>
 <!-- answer3 -->                           
-                        <div id="answer2" class="global-modal">
+                        <div id="answer3" class="global-modal">
 			                <div class="overlay"></div>
 			                    <div class="global-modal_contents modal-transition">
                                    <div class="global-modal-header">
@@ -172,37 +163,34 @@
                                         <br>2. The script should use String method split to extract the area code as a token, the first 3 digits of the phone number as a token, and the last 4 digits of the phone number as a token. </p>
                                     </div>
                                     <div class="global-modal-body">
-                                        <br>
-                                    
+
                                         <form name="date">
-                                            <h3>Current Date &amp; Time</h3>
+                                            <p>Current Date &amp; Time</p>
                                             <br>
                                             <label for="string"></label><input type="text" name="string" id="string" size="50"> Using toString Format<br>
                                             <label for="localestring"></label><input type="text" name="localestring" id="localestring" size="50"> Using toLocaleString Format<br>
                                             <label for="UTCstring"></label><input type="text" name="UTCstring" id="UTCstring" size="50"> Using UTCString Format<br>
                                             <br>
-                                            <h5 id="PSTdiff"></h5><br>
-                                            <h5 id="ESTdiff"></h5><br>
+                                            <p id="PSTdiff"></p><br>
+                                            <p id="ESTdiff"></p><br>
                                         </form>
-
-                                        <form name="tel">
-                                            <br>
-                                            <h3>Telephone</h3>
-                                            <br>
-                                            <h5>Input a phone number in the format "(999)999-9999</h5>
-                                            <br>
-                                            <p id="error"></p>
-                                            <br>
-                                            <label for="phone"></label><input type="text" name="phone" id="phone"><input type="button" onClick="process()" value="Submit">
-                                            <br><br>
-                                            <label for="areacode"></label><input type="text" name="areacode" id="areacode"><p>Area Code</p><br>
-                                            <label for="telnum"></label><input type="text" name="telnum" id="telnum"><p>Phone Number</p><br>
+                               
+                                       <form name="phone">
+                                            <table>
+                                            <tr><td>Enter a phone number in (999) 999-9999 fomrmat: <input type="text" name="input" size="10"></td></tr>
+                                            <tr><td>Area Code: <input type="text" name="area" size="10"></td></tr>
+                                            <tr><td>Rest: <input type="text" name="rest" size="10"></td></tr>
+                                                <tr><td>
+                                                <input type="button" onclick="extract()" value="Extract">
+                                                <input type="reset" value="RESET">
+                                            </td></tr>
+                                            </table>
                                         </form>
                                     </div>
                                 </div>
                             </div>
 <!-- answer4 -->                           
-                        <div id="answer3" class="global-modal">
+                        <div id="answer4" class="global-modal">
 			                <div class="overlay"></div>
 			                    <div class="global-modal_contents modal-transition">
                                     <div class="global-modal-header">
@@ -210,16 +198,16 @@
                                         <p>a script that inputs several lines of text in a form textarea and uses String method indexOf to determine the total number of occurrences of each letter of the alphabet in the text. Uppercase and lowercase letters should be counted together, e.g., 'A' and 'a' would count as 2 occurences of the same letter (use toLowerCase() or toUpperCase()). Store the totals for each letter in an array, and print the values in a vertical form textarea after the totals have been determined.</p>
                                     </div>
                                     <div class="global-modal-body">
-                                    <br>
-                                        <div><h3>Input Some Text in the Box Below</h3><input type="button" onClick="process()" value="Submit">
-                                        </div>
-                                        <br>
-                                        <textarea rows="5" cols="50" id="textinput"></textarea>
-                                        <br><br>
-                                        <h5>Result Displays Count of Letters</h5>
-                                        <br><br>
-                                        <textarea rows="15" cols="10" id="result"></textarea>
-                                        <br>
+                                   <form name="count">
+	<table>
+	<tr><td>Enter a string:  <textarea name="string"  rows="4" cols="40"></textarea></td></tr>
+ 	<tr><td>Result:  <textarea name="result"  rows="4" cols="40"></textarea></td></tr>
+ 	<tr><td>
+ 		<input type="button" onclick="countFrequency()" value="Count">
+		<input type="reset" value="RESET">
+ 	</td></tr>
+	</table>
+	</form>
                                     </div>
                                 </div>
                         </div>
@@ -233,14 +221,25 @@
                                         <p>A small airline has just purchased a computer for its new automated reservations system. You have been asked to program the new system. You are to write a program to assign seats on each flight of the airline's only plane</p>
                                     </div>
                                     <div class="global-modal-body">
-                                        <form name="passwordcheck">
-                                            <h5>Enter Your User Name and Password</h5>
-                                            <br>
-                                            <label for="username"></label>UserName <input type="text" name="username" id="username">
-                                            <label for="password"></label>Password <input type="text" name="password" id="password">
-                                            <br><br>
-                                            <input type="button" onClick="process()" value="Submit"><input type="reset" value="Reset">
-                                        </form>
+                                        <form name="myform" action="">
+                                            <table class="answer">
+                                                <tr>
+                                                    <th colspan="2">Please enter the username and password :</th>
+                                                </tr>
+                                                <tr>	
+                                                    <td>Username:</td>
+                                                    <td><input type="text" name="usr" onfocus="checkCookie()" size="10" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Password: </td>
+                                                    <td><input type="password" name="pwd" onfocus="checkCoookie()" size="10" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="button" onclick="process()" value="Login" /></td>
+                                                </tr>
+                                            </table>		
+	                                    </form>
                                     </div>
                                 </div>
                         </div>                                             
