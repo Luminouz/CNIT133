@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CNIT133: Homework 6</title>
+    <title>CNIT133: Homework 7</title>
 <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <!--JQuery-->
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     
 <!--fontawesome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <!--cssstlyesheet-->
+    <link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen" />
     <link href='owl.carousel.css'rel='stylesheet' type='text/css'> 
     <link href='magnific-popup.css' rel='stylesheet' type='text/css'>
     <link href='animate.css' rel='stylesheet' type='text/css'>    
     <link href='style_answer.css' rel='stylesheet' type='text/css'>
+<!--else-->
+<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+    
 	
 </head>
  
@@ -38,16 +43,26 @@
                    <li><a href="hw4.html">homework 4</a></li>
                    <li><a href="hw5.html">homework 5</a></li>
                    <li><a href="hw6.html">homework 6</a></li>
-<<<<<<< Updated upstream
-                   <li><a href="#">homework 7</a></li>
-=======
                    <li><a href="hw7.html">homework 7</a></li>
->>>>>>> Stashed changes
                    <li><a href="#">homework 8</a></li>
                 </ul>
             </div>
   
 </nav>
+<style>
+		nav {background:#FFF;}
+		nav ul {text-align:center;}
+		nav ul li {width: calc(100% / 5);}
+		nav ul li:hover {background-color:#fed766;}
+		nav ul li a {display:block;padding:15px 25px;color:#000;}
+		nav ul li ul {position:absolute;width:170px;background:#FFF;}
+		nav ul li ul li {width:170px;}
+		nav ul li ul li a {display:block;padding:15px 10px;color:#000;}
+		nav ul li ul li:hover a {background:#fed766;;}
+		nav ul li ul.fallback {display:none;}
+		nav ul li:hover ul.fallback {display:block;}
+		#accordion {width: 200px; margin: 0 auto;}
+	</style>
 </header>
    
 <body>
@@ -58,7 +73,7 @@
                         <div class="section-heading heading-padding">
                             <h1>CNIT 133: JavaScript</h1>
                             <p>fall 2016</p>
-                            <h1>Homework 6:<br>Objects</h1>
+                            <h1>Homework 7:<br>Object Model and Miscellaneous jQuery</h1>
                         </div>
                     </div>
                </div>
@@ -70,32 +85,32 @@
                        <div class="col-sm-6 text-center">
                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                                   <a class="icon" href="#" data-answer="#answer1"><i class="fa fa-2x"> 1</i></a>
-                                    <h3 class="text-uppercase">Round Number</h3>
-                                    <p>Math method round can be used to round a floating-point number to an integer.</p>
+                                    <h3 class="text-uppercase">Page Layout</h3>
+                                    <p>a webpage in which users are allowed to select a page layout and formatting through the use of the className property.</p>
                             </div>
 			            </div>
                        
                         <div class="col-sm-6 text-center">
                             <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                                   <a class="icon" href="#" data-answer="#answer2"><i class="fa fa-2x"> 2</i></a>
-                                    <h3 class="text-uppercase">String Functions</h3>
-                                    <p>search character and uses the String method charAt to determine the number of occurrences of the search character within the text</p>
+                                    <h3 class="text-uppercase">Password</h3>
+                                    <p> a page that has a header of Password Protection Page, a form password element, and submit and reset buttons. </p>
                             </div>
 			            </div>
 			            
 			            <div class="col-sm-6 text-center">
                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                                   <a class="icon" href="#" data-answer="#answer3"><i class="fa fa-2x"> 3</i></a>
-                                    <h3 class="text-uppercase">Date &amp; Time and Telephone No.</h3>
-                                    <p>Using toString(), toLocaleString() and toUTCString() for the Date object, write the current date and time in 3 formats.<br>Input a telephone number as a string in the format (999) 999-9999.</p>
+                                    <h3 class="text-uppercase">Mouseover Nav Bar</h3>
+                                    <p>a script that displays a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homework6.</p>
                             </div>
 			            </div>
 			            
 			            <div class="col-sm-6 text-center">
                            <div class="about-col wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="300ms">
                                   <a class="icon" href="#" data-answer="#answer4"><i class="fa fa-2x"> 4</i></a>
-                                    <h3 class="text-uppercase">Counting Letters</h3>
-                                    <p>a script that inputs several lines of text in a form textarea and uses String method indexOf to determine the total number of occurrences of each letter of the alphabet in the text</p>
+                                    <h3 class="text-uppercase">Photo Slide Show</h3>
+                                    <p>a photo slide-show using jQuery. For an explanation of the Advanced Gallery with jQuery FancyBox</p>
                             </div>
 			            </div>
 			            
@@ -115,24 +130,30 @@
 			                    <div class="global-modal_contents modal-transition">
                                     <div class="global-modal-header">
 			                            <span class="mobile-close"> X </span>
-			                            <p>a webpage that contains a script that has  a function that uses Math.round, Math.sqrt and Math.floor to:
-                                            <br>a) round the floating-point number to the nearest integer
-                                            <br>b) calculate the square root of the floating-point number and round it to an integer
-                                            <br>c) round the floating-point number to the nearest tenths position
-                                            <br>d) round the floating-point number to the nearest hunderdths position
-                                            <br>e) round the floating-point number to the nearest thousandths position</p>
+			                            <p>Choose at least three form elements from among radio buttons, select items, checkboxes, and buttons to allow the user to change the background color, font size, font family, font style, and font weight.</p>
                                     </div>
-                                  
-                                    <form name="rounding">
-                                        
-                                        <p>Enter a number with at least 3 decimal places: <input type="text" name="number" size="10"></p><br>
-                                        <input type="button" onclick="round()" value="Round">
-                                        <br>
-                                        <textarea name="result"  rows="4" cols="40"></textarea>
-                                        <br>
-                                        <input type="reset" value="RESET">
+                                    <form name="changeStyle">
+                                        <p id="words">Hello there! Select the following to update style changes.
+                                        Select Font Weight<br>
+                                        <input type="checkbox" name="weight" value="bold"> Bold<br>
+                                        <input type="checkbox" name="weight" value="900"> Lighter<br>
+                                        Select Background Color<br>
+
+                                        <input type="radio" name="color" value="black" checked> Black<br>
+                                        <input type="radio" name="color" value="yellow"> Yellow<br>
+                                        <input type="radio" name="color" value="blue"> Blue<br>
+                                         Select Font Size<br>
+
+                                         <select name="size">
+                                            <option value="16px">16 px</option>
+                                            <option value="20px">20 px</option>
+                                            <option value="24px">24 px</option>
+                                            <option value="28px">28 px</option>
+                                        </select><br>
+                                        <input type="button"  id="revert" value="REVERT" >
+                                    
+                                        </p>
                                     </form>
-                                
                                 </div>
                         </div>
 <!-- answer2 -->                           
@@ -141,19 +162,60 @@
 			                    <div class="global-modal_contents modal-transition">
                                     <div class="global-modal-header">
 			                            <span class="mobile-close"> X </span>
-			                            <p>a form textarea for the text and a form input box for the search character. If the search character is found within the text, display the number of occurrences of the search character in another form input box or a textarea. If the search character is not found within the text then display within a new window (using the window.open method), the message, 'Search character not found in text string!' along with the search character.<p>
+			                            <p>You should use an input type="password", which will display asterisks when the user enters the password. I suggest that you name your password as obama. If the password entered is incorrect then display "password is incorrect" and remain on the page. You may use javascript (insecure) or a php file (secure) to do this part. If the password is correct then allow entrance to a second page that contains a script that contains three hotspot labels, "Stop", "Caution", and "Go". When the user mouses over the "Stop" hotspot, the background color of the browser window should turn red. When the user mouses over the "Caution" hotspot, the background color should turn yellow. When the user mouses over the "Go" hotspot, the background color should turn green. When the user mouses off of any of these hotspots, return the background color to the original color of the browser window.<p>
                                     </div>
                                     <div class="global-modal-body">
-                                        <form name="search">
-                                            <table>
-                                            <tr><td>Enter a letter to search: <input type="text" name="char" size="10"></td></tr>
-                                            <tr><td>Enter texts: <textarea name="string"  rows="4" cols="40"></textarea></td></tr>
-                                            <tr><td>
-                                                <input type="button" onclick="searchLetter()" value="Search">
-                                                <input type="reset" value="RESET">
-                                            </td></tr>
-                                            </table>
-                                        </form>                
+                                        <form>
+		<p>
+			<label for="password">Password: </label>
+			<input type="password" name="password" id="password">
+		</p>
+		<p>
+			<input type="button"  id="submitBtn" value="SUBMIT" >
+			<input type="reset" value="RESET">
+		</p>
+		</form>
+	</div>
+	<style>
+		#login {
+		width: 300px;
+		margin: 0 auto;
+		z-index: 100;
+		}
+
+		#open {
+		margin: 0;
+		cursor: pointer;
+		background-color: #ff9999;
+		color: #FFF;
+		padding: 5px 0 2px 30px;
+		}
+
+		#login .close {
+		background-color: #2ab7ca; 
+		}
+
+		#open:hover {
+		color: #FFF;
+		background-color:  #fed766;
+		}
+
+		#login form {
+		padding: 10px 10px 10px 10px;
+		display: none; 
+		background-color: #2ab7ca; 
+		}
+		#login label {
+		display: inline-block;
+		width: 100px;
+		text-align:right;
+		color: #FFF;
+		}
+		#login input {
+		font-size: 14px; 
+		}
+	
+	</style>             
                                    </div>
                                 </div>
                         </div>
@@ -163,34 +225,34 @@
 			                    <div class="global-modal_contents modal-transition">
                                    <div class="global-modal-header">
                                         <span class="mobile-close"> X </span>
-			                            <p>1. Using the getTimezoneOffset(), write the hours difference between PST or PDT (Pacific Standard Time or Pacific Daylight Time) and UTC, and the hours difference between EST or EDT (Eastern Standard Time or Eastern Daylight Time) and UTC. Note: EST is 3 hours ahead of PST (Pacific Standard Time).
-                                        <br>
-                                        <br>2. The script should use String method split to extract the area code as a token, the first 3 digits of the phone number as a token, and the last 4 digits of the phone number as a token. </p>
+			                            <p>Write a script that displays a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homework6. When you mouseover any of these other links then display a drop-down menu that contains the links of their homework parts (part 1 - 4 or part 1 - 6). If applicable then also include links to any extra credit pages that you have done. Make sure that all links are working. You can use strictly JavaScript or else jQuery. </p>
                                     </div>
                                     <div class="global-modal-body">
-
-                                        <form name="date">
-                                            <p>Current Date &amp; Time</p>
-                                            <br>
-                                            <label for="string"></label><input type="text" name="string" id="string" size="50"> Using toString Format<br>
-                                            <label for="localestring"></label><input type="text" name="localestring" id="localestring" size="50"> Using toLocaleString Format<br>
-                                            <label for="UTCstring"></label><input type="text" name="UTCstring" id="UTCstring" size="50"> Using UTCString Format<br>
-                                            <br>
-                                            <p id="PSTdiff"></p><br>
-                                            <p id="ESTdiff"></p><br>
-                                        </form>
-                               
-                                       <form name="phone">
-                                            <table>
-                                            <tr><td>Enter a phone number in (999) 999-9999 fomrmat: <input type="text" name="input" size="10"></td></tr>
-                                            <tr><td>Area Code: <input type="text" name="area" size="10"></td></tr>
-                                            <tr><td>Rest: <input type="text" name="rest" size="10"></td></tr>
-                                                <tr><td>
-                                                <input type="button" onclick="extract()" value="Extract">
-                                                <input type="reset" value="RESET">
-                                            </td></tr>
-                                            </table>
-                                        </form>
+                                        <div id="accordion">
+                                          <h3>Part 1</h3>
+                                          <div>
+                                            <p>Give users options to change styles on this page</p>
+                                            <a href="#part1">Part1</a>
+                                          </div>
+                                          <h3>Part 2</h3>
+                                          <div>
+                                            <p>Show a password protected page</p>
+                                            <a href="#part2">Part2</a>
+                                          </div>
+                                          <h3>Part 3</h3>
+                                          <div>
+                                            <p>Show a navigation bar using jQuery UI</p>
+                                            <a href="#part3">Part3</a>
+                                          </div>
+                                          <h3>Part 4</h3>
+                                          <div>
+                                            <p>Show a slideshow using FancyBox</p>
+                                            <a href="#part4">Part4</a>
+                                          </div>
+                                        </div>
+      <br><br>
+     <div id="test">
+     </div> 
                                     </div>
                                 </div>
                             </div>
@@ -200,19 +262,16 @@
 			                    <div class="global-modal_contents modal-transition">
                                     <div class="global-modal-header">
 			                            <span class="mobile-close"> X </span>
-                                        <p>a script that inputs several lines of text in a form textarea and uses String method indexOf to determine the total number of occurrences of each letter of the alphabet in the text. Uppercase and lowercase letters should be counted together, e.g., 'A' and 'a' would count as 2 occurences of the same letter (use toLowerCase() or toUpperCase()). Store the totals for each letter in an array, and print the values in a vertical form textarea after the totals have been determined.</p>
+                                        <p>Create a photo slide-show using jQuery. For an explanation of the Advanced Gallery with jQuery FancyBox</p>
                                     </div>
-                                    <div class="global-modal-body">
-                                   <form name="count">
-	<table>
-	<tr><td>Enter a string:  <textarea name="string"  rows="4" cols="40"></textarea></td></tr>
- 	<tr><td>Result:  <textarea name="result"  rows="4" cols="40"></textarea></td></tr>
- 	<tr><td>
- 		<input type="button" onclick="countFrequency()" value="Count">
-		<input type="reset" value="RESET">
- 	</td></tr>
-	</table>
-	</form>
+                                        <div class="global-modal-body">
+                                        <a class="fancybox" rel="group" href="cat.jpg"><img src="cat.jpg" alt="" /></a>
+                                        <a class="fancybox" rel="group" href="giraffe.jpg"><img src="giraffe.jpg" alt="" /></a>
+                                        <a class="fancybox" rel="group" href="dog.jpg"><img src="dog.jpg" alt="" /></a>
+
+                                        <style>
+                                            img{width: 150px; height:100px;}
+                                        </style>
                                     </div>
                                 </div>
                         </div>
@@ -268,7 +327,7 @@
             </div>
     </section>   
 <script src="custom.js" type="text/javascript"></script>
-<script src="hw6.js" type="text/javascript"></script>
+<script src="hw7.js" type="text/javascript"></script>
 
 </body>
 </html>

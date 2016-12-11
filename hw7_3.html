@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CNIT133: Homework 7 Part 3 </title>
+<!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--JQuery-->
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    
+<!--fontawesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--cssstlyesheet-->
+    <link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen" />
+    <link href='owl.carousel.css'rel='stylesheet' type='text/css'> 
+    <link href='magnific-popup.css' rel='stylesheet' type='text/css'>
+    <link href='animate.css' rel='stylesheet' type='text/css'>    
+    <link href='style_answer.css' rel='stylesheet' type='text/css'>
+<!--else-->
+<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+    
+	
+</head>
+        <script>
+            $(document).ready(function(){$("#menu2").mouseover(function(){open2()});});
+            $(document).ready(function(){$("#menu2").mouseleave(function(){close2()});});
+            $(document).ready(function(){$("#myDropdown2").mouseleave(function(){close2()});});
+            function open2() {
+                document.getElementById("myDropdown2").classList.toggle("show");
+            }
+            
+            function close2() {
+                if ($('#myDropdown2:hover').length == 0) {
+                    document.getElementById("myDropdown2").classList.remove("show");
+                }
+            }
+            
+            $(document).ready(function(){$("#menu3").mouseover(function(){open3()});});
+            $(document).ready(function(){$("#menu3").mouseleave(function(){close3()});});
+            $(document).ready(function(){$("#myDropdown3").mouseleave(function(){close3()});});
+            
+            function open3() {
+                document.getElementById("myDropdown3").classList.toggle("show");
+            }
+            
+            function close3() {
+                if ($('#myDropdown3:hover').length == 0) {
+                    document.getElementById("myDropdown3").classList.remove("show");
+                }
+            }
+            
+            $(document).ready(function(){$("#menu4").mouseover(function(){open4()});});
+            $(document).ready(function(){$("#menu4").mouseleave(function(){close4()});});
+            $(document).ready(function(){$("#myDropdown4").mouseleave(function(){close4()});});
+            
+            function open4() {
+                document.getElementById("myDropdown4").classList.toggle("show");
+            }
+            
+            function close4() {
+                if ($('#myDropdown4:hover').length == 0) {
+                    document.getElementById("myDropdown4").classList.remove("show");
+                }
+            }
+            
+            $(document).ready(function(){$("#menu5").mouseover(function(){open5()});});
+            $(document).ready(function(){$("#menu5").mouseleave(function(){close5()});});
+            $(document).ready(function(){$("#myDropdown5").mouseleave(function(){close5()});});
+            
+            function open5() {
+                document.getElementById("myDropdown5").classList.toggle("show");
+            }
+            
+            function close5() {
+                if ($('#myDropdown5:hover').length == 0) {
+                    document.getElementById("myDropdown5").classList.remove("show");
+                }
+            }
+            
+            $(document).ready(function(){$("#menu6").mouseover(function(){open6()});});
+            $(document).ready(function(){$("#menu6").mouseleave(function(){close6()});});
+            $(document).ready(function(){$("#myDropdown6").mouseleave(function(){close6()});});
+            
+            function open6() {
+                document.getElementById("myDropdown6").classList.toggle("show");
+            }
+            
+            function close6() {
+                if ($('#myDropdown6:hover').length == 0) {
+                    document.getElementById("myDropdown6").classList.remove("show");
+                }
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+        <div  id="wrapper">
+            <h1>Menus</h1>
+            <h2><a href="hw7.html">Back to CNIT 133 - jQuery</a></h2>
+            <br>
+
+                <ul>
+                  <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu1">Homework 1</a>
+
+                  </li>
+                    
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu2">Homework 2</a>
+                    <div class="dropdown-content" id="myDropdown2">
+                      <a href="hw2p1.html">Ex 1</a>
+                      <a href="hw2p2.html">Ex 2</a>
+                      <a href="hw2p3.html">Ex 3</a>
+                        <a href="hw2p4.html">Ex 4</a>
+                        <a href="hw2p5.html">Ex extra</a>
+                    </div>
+                    </li>
+            
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu3">Homework 3</a>
+                    <div class="dropdown-content" id="myDropdown3">
+                      <a href="hw3p1.html">Ex 1</a>
+                      <a href="hw3p2.html">Ex 2</a>
+                      <a href="hw3p3.html">Ex 3</a>
+                      <a href="hw3p4.html">Ex 4</a>
+                      <a href="hw3p5.html">Ex 5</a>
+                      <a href="hw3p6.html">Ex 6</a>
+                      <a href="hw3p7.html">Ex extra</a>
+
+                    </div>
+                  </li>
+       
+        
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu4">Homework 4</a>
+                    <div class="dropdown-content" id="myDropdown4">
+                      <a href="hw4p1.html">Ex 1</a>
+                      <a href="hw4p2.html">Ex 2</a>
+                      <a href="hw4p3.html">Ex 3</a>
+                      <a href="hw4p4.html">Ex 4</a>
+                      <a href="hw4p5.html">Ex 5</a>
+                      <a href="hw4p6.html">Ex 6</a>
+                      <a href="hw4p7.html">Ex extra</a>
+                    </div>
+                  </li>
+            
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu5">Homework 5</a>
+                    <div class="dropdown-content" id="myDropdown5">
+                      <a href="hw5p1.html">Ex 1</a>
+                      <a href="hw5p2.html">Ex 2</a>
+                      <a href="hw5p3.html">Ex 3</a>
+                      <a href="hw5p4.html">Ex 4</a>
+                      <a href="hw5p5.html">Ex extra</a>
+                    </div>
+                  </li>
+            
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn" id="menu6">Homework 6</a>
+                    <div class="dropdown-content" id="myDropdown6">
+                      <a href="hw6p1.html">Ex 1</a>
+                      <a href="hw6p2.html">Ex 2</a>
+                      <a href="hw6p3.html">Ex 3</a>
+                      <a href="hw6p4.html">Ex 4</a>
+                    </div>
+                  </li>
+            </ul>
+               
+
+        </div>
+
+    </body>
+</html>

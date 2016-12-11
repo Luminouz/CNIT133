@@ -134,6 +134,84 @@ function process() {
 	window.alert("YOU HIT THE BUTTON"); 
 }
 
+<<<<<<< Updated upstream
+=======
+function setCookie(c_name,value,exdays)
+{
+	var date = new Date();
+	date.setDate(date.getDate() + exdays);
+	var c_value = escape(value) + ( (exdays == null) ? "" : "; expires=" + date.toUTCString() );
+	document.cookie = c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+	var i,x,y,ARRcookies=document.cookie.split(";");
+	for (i=0;i<ARRcookies.length;i++)
+	{
+		x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+		y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+		x=x.replace(/^\s+|\s+$/g,"");
+		  
+		if (x == c_name)
+		{
+			return unescape(y);
+		}
+	}
+}
+
+function checkCookie()
+{
+	var username = getCookie("username");
+	var password = getCookie("password");
+	
+	if ( (username != null && username != "") && (password != null && password != "") )
+	{
+		alert("Welcome again " + username);
+		document.myform.usr.value = username;
+		document.myform.pwd.value = password;
+	}
+}
+
+function cookieExist()
+{
+	var usr = getCookie("username");
+	var pwd = getCookie("password");
+	
+	if ((usr != null & usr != "") && ((pwd != null & pwd != "")))
+	{	return true;  }
+	else
+	{   return false; }
+}
+
+function process()
+{
+	var username = document.myform.usr.value;
+	var password = document.myform.pwd.value;
+	
+	if (username != "rosebud" || password != "komodo")
+	{
+		alert("Error: Incorrect username or password. \nPlease try again!!!");
+	}
+	else
+	{
+		alert("The username and password is Correct!!");
+		
+		if (cookieExist())
+		{
+			window.location = 'http://www.yahoo.com'
+		}
+		else
+		{
+			setCookie("username",username,30);
+			setCookie("password",password,30);
+
+			window.location = 'http://www.yahoo.com'
+		}
+	}	
+}
+
+>>>>>>> Stashed changes
 
 
 
