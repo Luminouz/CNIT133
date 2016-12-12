@@ -14,13 +14,13 @@
 <!--fontawesome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <!--cssstlyesheet-->
-    <link rel="stylesheet" href="jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
     <link href='owl.carousel.css'rel='stylesheet' type='text/css'> 
     <link href='magnific-popup.css' rel='stylesheet' type='text/css'>
     <link href='animate.css' rel='stylesheet' type='text/css'>    
     <link href='style_answer.css' rel='stylesheet' type='text/css'>
 <!--else-->
-<script type="text/javascript" src="jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
     
 	
 </head>
@@ -44,7 +44,7 @@
                    <li><a href="hw5.html">homework 5</a></li>
                    <li><a href="hw6.html">homework 6</a></li>
                    <li><a href="hw7.html">homework 7</a></li>
-                   <li><a href="#">homework 8</a></li>
+                   <li><a href="hw8.html">homework 8</a></li>
                 </ul>
             </div>
   
@@ -132,25 +132,25 @@
 			                            <span class="mobile-close"> X </span>
 			                            <p>Choose at least three form elements from among radio buttons, select items, checkboxes, and buttons to allow the user to change the background color, font size, font family, font style, and font weight.</p>
                                     </div>
-                                    <form name="changeStyle">
+                                    <form id="changeStyle">
                                         <p id="words">Hello there! Select the following to update style changes.
-                                        Select Font Weight<br>
-                                        <input type="checkbox" name="weight" value="bold"> Bold<br>
-                                        <input type="checkbox" name="weight" value="900"> Lighter<br>
+                                        Select Font Formatting<br>
+                                        <input type="checkbox" name="format_bold">Bold<br>
+                                        <input type="checkbox" name="format_underline">Underline<br>
+                                        
                                         Select Background Color<br>
-
                                         <input type="radio" name="color" value="black" checked> Black<br>
                                         <input type="radio" name="color" value="yellow"> Yellow<br>
                                         <input type="radio" name="color" value="blue"> Blue<br>
+                                        
                                          Select Font Size<br>
-
                                          <select name="size">
                                             <option value="16px">16 px</option>
                                             <option value="20px">20 px</option>
                                             <option value="24px">24 px</option>
                                             <option value="28px">28 px</option>
                                         </select><br>
-                                        <input type="button"  id="revert" value="REVERT" >
+                                        <input type="button" id="revert" value="REVERT" >
                                     
                                         </p>
                                     </form>
@@ -307,8 +307,6 @@
                                     </div>
                                 </div>
                         </div>                                             
-           
-    </section>
            
            <section id="footer section-padding">
               <div class="container">

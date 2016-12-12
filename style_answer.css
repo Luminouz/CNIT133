@@ -412,7 +412,7 @@ p.wr3 {
   }
 } 
 
-</* homework3 */>
+/* homework3 */
 
 .global-modal-body table {
 	border-collapse: collapse;
@@ -459,3 +459,12 @@ textarea {
     color: #333;
 }
 
+/* homework7 */
+
+#words.bold {
+    font-weight: bold;
+}
+
+#words.underline {
+    text-decoration: underline;
+}

@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-	$("#accordion").accordion();
+	//$("#accordion").accordion();
 	$("#open").click(function () {
         var openElem = $(this);
         var loginForm = $("#login form");
@@ -38,9 +38,9 @@ $(document).ready(function() {
 	 $("#stop").mouseover(function() {
     	$(this).parent().css("background-color","red");
 	});
-	$('#stop').mouseout(function() {
-		$(this).parent().css("background-color","#e6e6ea");
-	});
+    $('#stop').mouseout(function() {
+        $(this).parent().css("background-color","#e6e6ea");
+    });
 
 	$('nav li ul').hide().removeClass('fallback');
 	$('nav li').hover(
@@ -56,9 +56,22 @@ $(document).ready(function() {
 	// $('input[name="weight']).click(function () { 
  //    $('input:checked').css('background','#FF0000');
  //    $('input:checked+label').css('background','#ff0000');
-	$("input[name='weight']").change(function(){
- 		$("#words").css("font-weight", $(this).val());
+	$("input[name='format_bold']").change(function(){
+        if (this.checked) {
+            $("#words").css("font-weight", "bold");
+        } else {
+            $("#words").css("font-weight", "");
+        }
  	});
+    
+    $("input[name='format_underline']").change(function(){
+        if (this.checked) {
+            $("#words").css("text-decoration", "underline");
+        } else {
+            $("#words").css("text-decoration", "");
+        }
+    });
+    
  	$("input[name='color']").change(function(){
  		$("#words").css("color", $(this).val());
  	});
@@ -68,7 +81,9 @@ $(document).ready(function() {
  	});
 
  	$("#revert").click(function() {
- 		$("#words").css({ 'font-weight' : '', 'color' : '', 'font-size' : '' });
+ 		$("#words").css({ 'font-weight' : '', 'text-decoration' : '', 'color' : '', 'font-size' : '' });
+        $("input[name='format_bold']").prop('checked', false);
+        $("input[name='format_underline']").prop('checked', false);
  	})
 
 });
