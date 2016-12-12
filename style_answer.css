@@ -468,3 +468,81 @@ textarea {
 #words.underline {
     text-decoration: underline;
 }
+
+
+/* specific code for the jQuery page*/
+
+#navigation ul,
+#navigation li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#navigation a {
+	background-color: rgb(204, 204, 204);
+	text-decoration: none;
+	font-size: 11px;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+}
+
+#navigation a:hover {
+	background-color: #25cbf5;
+	color: #fff;
+}
+
+
+/*rest of document Bootstrap */
+
+
+.column-width {
+	width: 20%;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.bump-space {
+	padding-top: 20px;
+}
+
+.bump-space-bottom {
+	padding-bottom: 20px;
+}
+
+#panel,
+#flip {
+	padding: 5px;
+	text-align: center;
+	background-color: #c0c0c0;
+	width: 100%;
+	border: solid 1px #c3c3c3;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#panel {
+	padding: 10px;
+	width: 100%;
+	display: none;
+	text-align: left;
+}
+
+.valid {
+    text-align: center;
+}
